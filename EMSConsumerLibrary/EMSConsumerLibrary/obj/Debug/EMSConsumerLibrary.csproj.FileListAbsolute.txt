@@ -1,6 +1,0 @@
-c:\users\nandan.kaushik\documents\visual studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSConsumerLibrary.dll
-c:\users\nandan.kaushik\documents\visual studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSConsumerLibrary.pdb
-c:\users\nandan.kaushik\documents\visual studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSConsumerLibrary.dll
-c:\users\nandan.kaushik\documents\visual studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSConsumerLibrary.pdb
-C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSConsumerLibrary.csprojResolveAssemblyReference.cache
-C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSConsumerLibrary.dll.config
