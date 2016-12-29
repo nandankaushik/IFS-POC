@@ -1,0 +1,909 @@
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6748
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6748"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617C:47} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68617B.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68617B:1} MsgType={} Timestamp={9/28/2016 8:00:44 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200002
+  BW-ThreadName :  JobCourier5 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6980
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6980"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617F:48} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68617E.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68617E:1} MsgType={} Timestamp={9/28/2016 8:00:45 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200003
+  BW-ThreadName :  JobCourier4 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5208
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5208"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686182:49} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686181.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686181:1} MsgType={} Timestamp={9/28/2016 8:00:45 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200004
+  BW-ThreadName :  JobCourier3 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6496
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6496"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686185:50} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686184.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686184:1} MsgType={} Timestamp={9/28/2016 8:00:45 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200005
+  BW-ThreadName :  JobCourier2 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5456
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5456"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686188:51} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686187.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686187:1} MsgType={} Timestamp={9/28/2016 8:00:45 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200006
+  BW-ThreadName :  JobCourier1 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 1160
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_1160"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618B:52} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68618A.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68618A:1} MsgType={} Timestamp={9/28/2016 8:00:46 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200007
+  BW-ThreadName :  JobCourier0 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6540
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6540"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618E:53} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68618D.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68618D:1} MsgType={} Timestamp={9/28/2016 8:00:46 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200008
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5480
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5480"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686179:54} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686190.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686190:1} MsgType={} Timestamp={9/28/2016 8:00:46 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200009
+  BW-ThreadName :  JobCourier6 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6480
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6480"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617C:55} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686192.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686192:1} MsgType={} Timestamp={9/28/2016 8:00:46 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200010
+  BW-ThreadName :  JobCourier5 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5732
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5732"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617F:56} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686194.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686194:1} MsgType={} Timestamp={9/28/2016 8:00:47 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200011
+  BW-ThreadName :  JobCourier4 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5604
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5604"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686182:57} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686196.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686196:1} MsgType={} Timestamp={9/28/2016 8:00:47 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200012
+  BW-ThreadName :  JobCourier3 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 2720
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_2720"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686185:58} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB686198.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB686198:1} MsgType={} Timestamp={9/28/2016 8:00:47 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200013
+  BW-ThreadName :  JobCourier2 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6356
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6356"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686188:59} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68619A.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68619A:1} MsgType={} Timestamp={9/28/2016 8:00:47 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200014
+  BW-ThreadName :  JobCourier1 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5468
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5468"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618B:60} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68619C.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68619C:1} MsgType={} Timestamp={9/28/2016 8:00:48 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200015
+  BW-ThreadName :  JobCourier0 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 1632
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_1632"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618E:61} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB68619E.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB68619E:1} MsgType={} Timestamp={9/28/2016 8:00:48 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200016
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 7056
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_7056"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686179:62} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861A0.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861A0:1} MsgType={} Timestamp={9/28/2016 8:00:48 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200017
+  BW-ThreadName :  JobCourier6 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5076
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5076"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617C:63} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861A2.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861A2:1} MsgType={} Timestamp={9/28/2016 8:00:48 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200018
+  BW-ThreadName :  JobCourier5 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6480
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6480"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617F:64} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861A4.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861A4:1} MsgType={} Timestamp={9/28/2016 8:00:48 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200019
+  BW-ThreadName :  JobCourier4 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5732
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5732"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686182:65} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861A6.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861A6:1} MsgType={} Timestamp={9/28/2016 8:00:49 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200020
+  BW-ThreadName :  JobCourier3 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6776
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6776"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686185:66} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861A8.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861A8:1} MsgType={} Timestamp={9/28/2016 8:00:49 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200021
+  BW-ThreadName :  JobCourier2 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 2720
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_2720"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686188:67} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861AA.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861AA:1} MsgType={} Timestamp={9/28/2016 8:00:49 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200022
+  BW-ThreadName :  JobCourier1 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6356
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6356"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618B:68} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861AC.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861AC:1} MsgType={} Timestamp={9/28/2016 8:00:49 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200023
+  BW-ThreadName :  JobCourier0 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 1656
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_1656"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618E:69} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861AE.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861AE:1} MsgType={} Timestamp={9/28/2016 8:00:50 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200024
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 1632
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_1632"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686179:70} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861B0.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861B0:1} MsgType={} Timestamp={9/28/2016 8:00:50 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200025
+  BW-ThreadName :  JobCourier6 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5672
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5672"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617C:71} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861B2.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861B2:1} MsgType={} Timestamp={9/28/2016 8:00:50 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200026
+  BW-ThreadName :  JobCourier5 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 504
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_504"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68617F:72} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861B4.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861B4:1} MsgType={} Timestamp={9/28/2016 8:00:50 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200027
+  BW-ThreadName :  JobCourier4 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6480
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6480"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686182:73} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861B6.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861B6:1} MsgType={} Timestamp={9/28/2016 8:00:51 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200028
+  BW-ThreadName :  JobCourier3 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5732
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5732"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686185:74} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861B8.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861B8:1} MsgType={} Timestamp={9/28/2016 8:00:51 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200029
+  BW-ThreadName :  JobCourier2 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 6776
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_6776"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686188:75} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861BA.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861BA:1} MsgType={} Timestamp={9/28/2016 8:00:51 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200030
+  BW-ThreadName :  JobCourier1 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 3972
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_3972"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618B:76} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861BC.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861BC:1} MsgType={} Timestamp={9/28/2016 8:00:51 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200031
+  BW-ThreadName :  JobCourier0 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 1132
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_1132"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68618E:77} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861BE.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861BE:1} MsgType={} Timestamp={9/28/2016 8:00:52 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200032
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 5456
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_5456"
+ ClientId: BE-ING-IFS-LAMS} }
+
+
+*****************************************************************************************
+Received Response:
+
+TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686179:78} Destination={Queue[$TMP$.E4EMS-SERVER.193457EB6861C0.1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={ID:E4EMS-SERVER.193457EB6861C0:1} MsgType={} Timestamp={9/28/2016 8:00:52 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+############################### BW's Reply  text msg sent  from 
+  Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 200033
+  BW-ThreadName :  JobCourier6 
+  BW-Processname : Miscellaneous/Subprocess/ProcessMessage.process
+ 
+} }
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={abc.def} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 2500
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_2500"
+ ClientId: BE-ING-IFS-LAMS} }

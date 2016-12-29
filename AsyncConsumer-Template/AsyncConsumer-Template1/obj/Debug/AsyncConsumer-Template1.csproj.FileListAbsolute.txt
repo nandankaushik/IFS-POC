@@ -1,0 +1,9 @@
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\AsyncConsumer-Template1.exe.config
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\AsyncConsumer-Template1.exe
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\AsyncConsumer-Template1.pdb
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\EMSConsumerLibrary.pdb
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\obj\Debug\AsyncConsumer-Template1.csprojResolveAssemblyReference.cache
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\obj\Debug\AsyncConsumer-Template1.exe
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\obj\Debug\AsyncConsumer-Template1.pdb
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\EMSFrameworkLibrary.dll
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template1\AsyncConsumer-Template1\bin\Debug\EMSFrameworkLibrary.pdb

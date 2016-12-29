@@ -1,0 +1,13 @@
+
+
+*****************************************************************************************
+About to send request:
+
+TextMessage={ Header={ MessageID={} Destination={} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={dd} MsgType={} Timestamp={0} Expiration={0} Priority={4} } Properties={ } Text={hellothere-
+
+ MachineName : LAP-TZ-0X60753
+ SendingProcessName : TestStubsForEMSframework
+ SendingProcessId : 7716
+ Method : Main
+ ThreadName:"LAP-TZ-0X60753_TestStubsForEMSframework_7716"
+ ClientId: BE-ING-IFS-LAMS} }

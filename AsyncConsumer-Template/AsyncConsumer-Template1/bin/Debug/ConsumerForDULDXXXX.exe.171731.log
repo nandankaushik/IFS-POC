@@ -1,0 +1,135 @@
+
+
+
+----------------------------------------------------------
+  ConnectionId : 71
+
+  ConsumerID : 168
+
+  SessionId : 259
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_6036
+----------------------------------------------------------
+  ConnectionId : 71
+
+  ConsumerID : 164
+
+  SessionId : 255
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_6036
+----------------------------------------------------------
+  ConnectionId : 71
+
+  ConsumerID : 165
+
+  SessionId : 256
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_6036
+----------------------------------------------------------
+  ConnectionId : 71
+
+  ConsumerID : 166
+
+  SessionId : 257
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_6036
+----------------------------------------------------------
+  ConnectionId : 71
+
+  ConsumerID : 167
+
+  SessionId : 258
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_6036
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "EMS Session Dispatcher (259)":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.F1C57EA285CE7:75} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.F1C57EA285C105.51]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/27/2016 11:47:35 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 179014
+  BW-ThreadName :  JobCourier0 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 6036
+ ThreadName:"EMS Session Dispatcher (259)"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 262
+
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void OnMessage(TIBCO.EMS.Message)
+	 (3) Void _Submit(System.Object, TIBCO.EMS.Message, System.Object)
+	 (4) Boolean _DispatchAsyncMessage(Dispatcher, Boolean)
+	 (5) Void Run()
+	 (6) Void ThreadStart_Context(System.Object)
+	 (7) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (8) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (9) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (10) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "EMS Session Dispatcher (255)":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.F1C57EA285C10C:79} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.F1C57EA285C10D.55]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/27/2016 11:48:24 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 180000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 6036
+ ThreadName:"EMS Session Dispatcher (255)"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 270
+
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void OnMessage(TIBCO.EMS.Message)
+	 (3) Void _Submit(System.Object, TIBCO.EMS.Message, System.Object)
+	 (4) Boolean _DispatchAsyncMessage(Dispatcher, Boolean)
+	 (5) Void Run()
+	 (6) Void ThreadStart_Context(System.Object)
+	 (7) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (8) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (9) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (10) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************

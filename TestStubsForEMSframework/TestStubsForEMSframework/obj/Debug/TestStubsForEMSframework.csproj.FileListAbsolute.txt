@@ -1,0 +1,11 @@
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\obj\Debug\TestStubsForEMSframework.csprojResolveAssemblyReference.cache
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\obj\Debug\TestStubsForEMSframework.exe
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\obj\Debug\TestStubsForEMSframework.pdb
+c:\users\nandan.kaushik\documents\visual studio 2013\Projects\AsyncConsumer-Template\TestStubsForEMSframework.exe.config
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template\TestStubsForEMSframework.exe
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template\TestStubsForEMSframework.pdb
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\bin\TestStubsForEMSframework.exe.config
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\bin\TestStubsForEMSframework.exe
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\bin\TestStubsForEMSframework.pdb
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\bin\EMSFrameworkLibrary.dll
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\TestStubsForEMSframework\TestStubsForEMSframework\bin\EMSFrameworkLibrary.pdb
