@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/1474010482520/SendRTImpl/ASyncConsumers" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jndi="http://www.tibco.com/namespaces/ws/2004/soap/apis/jndi" name="Untitled" targetNamespace="http://xmlns.example.com/1474010482520/SendRTImpl/ASyncConsumers">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" targetNamespace="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="JobID" type="xs:string"/>
+            <xs:element name="MachineName" type="xs:string"/>
+            <xs:element name="MethodName" type="xs:string"/>
+            <xs:element name="ProcessID" type="xs:string"/>
+            <xs:element name="ProcessName" type="xs:string"/>
+            <xs:element name="ProjectName" type="xs:string"/>
+            <xs:element name="RuntimeInfo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:MachineName" minOccurs="0"/>
+                        <xs:element ref="ns0:ProcessName" minOccurs="0"/>
+                        <xs:element ref="ns0:ProjectName" minOccurs="0"/>
+                        <xs:element ref="ns0:ProcessID" minOccurs="0"/>
+                        <xs:element ref="ns0:JobID" minOccurs="0"/>
+                        <xs:element ref="ns0:MethodName" minOccurs="0"/>
+                        <xs:element ref="ns0:ThreadName" minOccurs="0"/>
+                    </xs:sequence>
+                    <xs:attribute ref="ns0:Type"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ThreadName" type="xs:string"/>
+            <xs:attribute name="Type" type="xs:string"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="ServiceProvider-ASync__SOAP_lpar_EMS_rpar_">
+        <wsdl:port name="SOAPEventSource" binding="tns:SOAPEventSourceBinding">
+            <soap:address location=""/>
+            <jms:connectionFactory>QueueConnectionFactory</jms:connectionFactory>
+            <jms:targetAddress destination="queue">Consumers.For.BW.q1</jms:targetAddress>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="PortType">
+        <wsdl:operation name="SendRT">
+            <wsdl:input message="tns:RTInfo"/>
+            <wsdl:output message="tns:OutText"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SOAPEventSourceBinding" type="tns:PortType">
+        <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        <jms:binding messageFormat="Text"/>
+        <wsdl:operation name="SendRT">
+            <soap:operation style="document" soapAction="/ASyncConsumers/ServiceProvider-Soap-ASync"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="Info"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="part1"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="RTInfo">
+        <wsdl:part name="Info" element="ns0:RuntimeInfo"/>
+    </wsdl:message>
+    <wsdl:message name="OutText">
+        <wsdl:part name="part1" type="xs:string"/>
+    </wsdl:message>
+</wsdl:definitions>

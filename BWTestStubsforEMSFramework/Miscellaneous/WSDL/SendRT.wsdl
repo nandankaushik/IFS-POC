@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" xmlns:tns="http://xmlns.example.com/1474010482520" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.example.com/1474010482520">
+    <import namespace="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" location="../Schema.xsd"/>
+    <message name="RTInfo">
+        <part name="Info" element="ns:RuntimeInfo"/>
+    </message>
+    <message name="OutText">
+        <part name="part1" type="xsd:string"/>
+    </message>
+    <portType name="PortType">
+        <operation name="SendRT">
+            <input message="tns:RTInfo"/>
+            <output message="tns:OutText"/>
+        </operation>
+    </portType>
+</definitions>

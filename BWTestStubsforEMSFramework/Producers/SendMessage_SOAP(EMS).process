@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" xmlns:pfx="http://www.tibco.com/pe/DeployedVarsType" xmlns:info="java://Common.Info" xmlns:ns2="www.tibco.com/plugin/java/JavaMethodActivityInput" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:ns4="www.tibco.com/plugin/java/JavaToXmlActivityInput" xmlns:ns3="www.tibco.com/plugin/java/JavaMethodActivityOutput" xmlns:ns0="www.tibco.com/plugin/Sleep" xmlns:pfx2="http://xmlns.example.com/1474010482520/SendRTImpl/ASyncConsumers">
+    <wsdl:import namespace="http://xmlns.example.com/1474010482520/SendRTImpl/ASyncConsumers" location="/Miscellaneous/WSDL/SendRT-Concrete.wsdl"/>
+    <pd:name>Producers/SendMessage_SOAP(EMS).process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>81</pd:startX>
+    <pd:startY>123</pd:startY>
+    <pd:returnBindings/>
+    <pd:endName>End</pd:endName>
+    <pd:endX>988</pd:endX>
+    <pd:endY>106</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1464025193124</pd:targetNamespace>
+    <pd:group name="Group">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>219</pd:x>
+        <pd:y>1</pd:y>
+        <pd:width>528</pd:width>
+        <pd:height>226</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>while</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:indexSlot>i</pd:indexSlot>
+            <pd:outSlot>replies</pd:outSlot>
+            <pd:activityOutputName/>
+            <pd:whileCondition>$i&lt;=$_globalVariables/pfx:GlobalVariables/CountofMessages</pd:whileCondition>
+            <pd:accumulateOutput>false</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>SOAPRequestReply</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>SOAPRequestReply</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="SOAPRequestReply">
+            <pd:type>com.tibco.plugin.soap.SOAPSendReceiveActivity</pd:type>
+            <pd:resourceType>ae.activities.SOAPSendReceiveUI</pd:resourceType>
+            <pd:x>460</pd:x>
+            <pd:y>115</pd:y>
+            <config>
+                <timeout>0</timeout>
+                <soapAttachmentStyle>SwA</soapAttachmentStyle>
+                <timeoutType>Seconds</timeoutType>
+                <service>pfx2:ServiceProvider-ASync__SOAP_lpar_EMS_rpar_</service>
+                <servicePort>SOAPEventSource</servicePort>
+                <operation>SendRT</operation>
+                <soapAction>/ASyncConsumers/ServiceProvider-Soap-ASync</soapAction>
+                <sharedChannels>
+                    <jmsChannel>
+                        <NamingURL>tibjmsnaming://localhost:7222</NamingURL>
+                        <NamingInitialContextFactory>com.tibco.tibjms.naming.TibjmsInitialContextFactory</NamingInitialContextFactory>
+                        <NamingPrincipal>admin</NamingPrincipal>
+                        <NamingCredential/>
+                        <ConnectionFactory>QueueConnectionFactory</ConnectionFactory>
+                        <JMSTo>Consumers.For.BW.q1</JMSTo>
+                        <JMSMessageType>Text</JMSMessageType>
+                        <JMSDeliveryMode>PERSISTENT</JMSDeliveryMode>
+                        <JMSPriority>4</JMSPriority>
+                        <JMSTimeToLive>0</JMSTimeToLive>
+                        <JMSUserName>admin</JMSUserName>
+                        <JMSPassword/>
+                        <JMSNamingValidateSecurityContext>true</JMSNamingValidateSecurityContext>
+                    </jmsChannel>
+                </sharedChannels>
+            </config>
+            <pd:inputBindings>
+                <inputMessage>
+                    <ns5:RuntimeInfo>
+                        <xsl:attribute name="ns5:Type">
+                            <xsl:value-of select="&quot;BW&quot;"/>
+                        </xsl:attribute>
+                        <ns5:MachineName>
+                            <xsl:value-of select="BW:getHostName()"/>
+                        </ns5:MachineName>
+                        <ns5:ProcessName>
+                            <xsl:value-of select="BW:getCurrentProcessName($_processContext/ns1:ProcessContext/ProcessId)"/>
+                        </ns5:ProcessName>
+                        <ns5:ProjectName>
+                            <xsl:value-of select="$_processContext/ns1:ProcessContext/ProjectName"/>
+                        </ns5:ProjectName>
+                        <ns5:ProcessID>
+                            <xsl:value-of select="info:GetProcessId()"/>
+                        </ns5:ProcessID>
+                        <ns5:JobID>
+                            <xsl:value-of select="$_processContext/ns1:ProcessContext/ProcessId"/>
+                        </ns5:JobID>
+                        <ns5:ThreadName>
+                            <xsl:value-of select="info:GetThreadInfo()"/>
+                        </ns5:ThreadName>
+                    </ns5:RuntimeInfo>
+                </inputMessage>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Group</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/pe/EngineTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <pd:name>Miscellaneous/Subprocess/SetThreadName.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="ThreadName" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>150</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings/>
+    <pd:endName>End</pd:endName>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1474878992807</pd:targetNamespace>
+    <pd:activity name="Java Code">
+        <pd:type>com.tibco.plugin.java.JavaActivity</pd:type>
+        <pd:resourceType>ae.javapalette.javaActivity</pd:resourceType>
+        <pd:x>289</pd:x>
+        <pd:y>67</pd:y>
+        <config>
+            <fileName>SetThreadNameJavaCode</fileName>
+            <packageName>Miscellaneous.Subprocess.SetThreadName</packageName>
+            <fullsource>package Miscellaneous.Subprocess.SetThreadName;
+import java.util.*;
+import java.io.*;
+public class SetThreadNameJavaCode{
+/****** START SET/GET METHOD, DO NOT MODIFY *****/
+	protected String ThreadName = "";
+	public String getThreadName() {
+		return ThreadName;
+	}
+	public void setThreadName(String val) {
+		ThreadName = val;
+	}
+/****** END SET/GET METHOD, DO NOT MODIFY *****/
+	public SetThreadNameJavaCode() {
+	}
+	public void invoke() throws Exception {
+/* Available Variables: DO NOT MODIFY
+	In  : String ThreadName
+* Available Variables: DO NOT MODIFY *****/
+
+		Thread.currentThread().setName(ThreadName);}
+}
+</fullsource>
+            <inputData>
+                <row>
+                    <fieldName>ThreadName</fieldName>
+                    <fieldType>string</fieldType>
+                    <fieldRequired>optional</fieldRequired>
+                </row>
+            </inputData>
+            <byteCode>
+                <class>
+                    <name>SetThreadNameJavaCode</name>
+                    <byteCode>yv66vgAAADIAJAkABgAXCgAHABgIABkKABoAGwoAGgAcBwAdBwAeAQAKVGhyZWFkTmFtZQEAEkxqYXZhL2xhbmcvU3RyaW5nOwEADWdldFRocmVhZE5hbWUBABQoKUxqYXZhL2xhbmcvU3RyaW5nOwEABENvZGUBAA9MaW5lTnVtYmVyVGFibGUBAA1zZXRUaHJlYWROYW1lAQAVKExqYXZhL2xhbmcvU3RyaW5nOylWAQAGPGluaXQ+AQADKClWAQAGaW52b2tlAQAKRXhjZXB0aW9ucwcAHwEAClNvdXJjZUZpbGUBABpTZXRUaHJlYWROYW1lSmF2YUNvZGUuamF2YQwACAAJDAAQABEBAAAHACAMACEAIgwAIwAPAQA8TWlzY2VsbGFuZW91cy9TdWJwcm9jZXNzL1NldFRocmVhZE5hbWUvU2V0VGhyZWFkTmFtZUphdmFDb2RlAQAQamF2YS9sYW5nL09iamVjdAEAE2phdmEvbGFuZy9FeGNlcHRpb24BABBqYXZhL2xhbmcvVGhyZWFkAQANY3VycmVudFRocmVhZAEAFCgpTGphdmEvbGFuZy9UaHJlYWQ7AQAHc2V0TmFtZQAhAAYABwAAAAEABAAIAAkAAAAEAAEACgALAAEADAAAAB0AAQABAAAABSq0AAGwAAAAAQANAAAABgABAAAACAABAA4ADwABAAwAAAAiAAIAAgAAAAYqK7UAAbEAAAABAA0AAAAKAAIAAAALAAUADAABABAAEQABAAwAAAArAAIAAQAAAAsqtwACKhIDtQABsQAAAAEADQAAAA4AAwAAAA4ABAAGAAoADwABABIAEQACAAwAAAAjAAIAAQAAAAu4AAQqtAABtgAFsQAAAAEADQAAAAYAAQAAABUAEwAAAAQAAQAUAAEAFQAAAAIAFg==</byteCode>
+                </class>
+            </byteCode>
+        </config>
+        <pd:inputBindings>
+            <javaCodeActivityInput>
+                <ThreadName>
+                    <xsl:value-of select="$Start/root/ThreadName"/>
+                </ThreadName>
+            </javaCodeActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Java Code</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Java Code</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:ns2="www.tibco.com/plugin/java/JavaMethodActivityInput" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:ns4="www.tibco.com/plugin/java/JavaToXmlActivityInput" xmlns:ns3="www.tibco.com/plugin/java/JavaMethodActivityOutput" xmlns:ns0="www.tibco.com/plugin/Sleep" xmlns:pfx="http://www.tibco.com/pe/DeployedVarsType" xmlns:info="java://Common.Info">
+    <pd:name>Producers/SendRequest.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>88</pd:startX>
+    <pd:startY>160</pd:startY>
+    <pd:returnBindings/>
+    <pd:endName>End</pd:endName>
+    <pd:endX>1008</pd:endX>
+    <pd:endY>140</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1464025193124</pd:targetNamespace>
+    <pd:group name="Group">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>239</pd:x>
+        <pd:y>64</pd:y>
+        <pd:width>472</pd:width>
+        <pd:height>167</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>while</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:indexSlot>i</pd:indexSlot>
+            <pd:outSlot>replies</pd:outSlot>
+            <pd:activityOutputName>JMS-Queue-Requestor</pd:activityOutputName>
+            <pd:whileCondition>$i&lt;=$_globalVariables/pfx:GlobalVariables/CountofMessages</pd:whileCondition>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>JMS-Queue-Requestor</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>JMS-Queue-Requestor</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="JMS-Queue-Requestor">
+            <pd:type>com.tibco.plugin.jms.JMSQueueRequestReplyActivity</pd:type>
+            <pd:resourceType>ae.activities.JMSQueueRequestReplyActivity</pd:resourceType>
+            <pd:x>470</pd:x>
+            <pd:y>153</pd:y>
+            <config>
+                <PermittedMessageType>Text</PermittedMessageType>
+                <SessionAttributes>
+                    <transacted>false</transacted>
+                    <acknowledgeMode>1</acknowledgeMode>
+                    <maxSessions>1</maxSessions>
+                    <destination>%%QueueForBWProducer%%</destination>
+                </SessionAttributes>
+                <ConfigurableHeaders>
+                    <JMSDeliveryMode>PERSISTENT</JMSDeliveryMode>
+                    <JMSExpiration>0</JMSExpiration>
+                    <JMSPriority>4</JMSPriority>
+                </ConfigurableHeaders>
+                <ConnectionReference>/Miscellaneous/Connections/JMS Connection.sharedjmscon</ConnectionReference>
+            </config>
+            <pd:inputBindings>
+                <ns:ActivityInput>
+                    <requestTimeout>
+                        <xsl:value-of select="200"/>
+                    </requestTimeout>
+                    <Body>
+                        <xsl:value-of select="concat ( &quot;&#xA; &#xA;  RR  text msg sent  from Machine : &quot; ,  BW:getHostName(),   &quot;&#xA;  BW-Project : &quot;,   $_processContext/ns1:ProcessContext/ProjectName   ,  &quot;&#xA;  BW-Jobid : &quot;, $_processContext/ns1:ProcessContext/ProcessId ,&#xA;&#xA;  &quot;&#xA;  BW-ThreadName :  &quot; , info:GetThreadInfo()&#xA;,&quot; &#xA;  BW-Processname : &quot;,BW:getCurrentProcessName($_processContext/ns1:ProcessContext/ProcessId),&quot;&#xA; &#xA;&quot; )"/>
+                    </Body>
+                </ns:ActivityInput>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Group</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

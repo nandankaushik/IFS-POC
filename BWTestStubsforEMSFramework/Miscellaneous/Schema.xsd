@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="RuntimeInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MachineName" minOccurs="0"/>
+				<xs:element ref="ProcessName" minOccurs="0"/>
+				<xs:element ref="ProjectName" minOccurs="0"/>
+				<xs:element ref="ProcessID" minOccurs="0"/>
+				<xs:element ref="JobID" minOccurs="0"/>
+				<xs:element ref="MethodName" minOccurs="0"/>
+				<xs:element ref="ThreadName" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute ref="Type"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MachineName" type="xs:string"/>
+	<xs:element name="ProcessName" type="xs:string"/>
+	<xs:element name="ProcessID" type="xs:string"/>
+	<xs:element name="MethodName" type="xs:string"/>
+	<xs:element name="JobID" type="xs:string"/>
+	<xs:element name="ThreadName" type="xs:string"/>
+	<xs:element name="ProjectName" type="xs:string"/>
+	<xs:attribute name="Type" type="xs:string"/>
+</xs:schema>

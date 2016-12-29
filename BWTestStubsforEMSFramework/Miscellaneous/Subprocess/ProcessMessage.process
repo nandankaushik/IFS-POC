@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/pe/EngineTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:info="java://Common.Info">
+    <pd:name>Miscellaneous/Subprocess/ProcessMessage.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Message" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>150</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings>
+        <root>
+            <Output>
+                <xsl:value-of select="concat ( &quot;&#xA; &#xA;############################### BW's Reply  text msg sent  from &#xA;  Machine : &quot; ,  BW:getHostName(),   &quot;&#xA;  BW-Project : &quot;,   $_processContext/ns:ProcessContext/ProjectName   ,  &quot;&#xA;  BW-Jobid : &quot;, $_processContext/ns:ProcessContext/ProcessId , &quot;&#xA;  BW-ThreadName :  &quot; , info:GetThreadInfo(),&quot; &#xA;  BW-Processname : &quot;,BW:getCurrentProcessName($_processContext/ns:ProcessContext/ProcessId),&quot;&#xA; &#xA;&quot; )"/>
+            </Output>
+        </root>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Output" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1471092121413</pd:targetNamespace>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/pe/EngineTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:info="java://Common.Info">
+    <pd:name>Miscellaneous/Subprocess/Multi-ProcessMessage.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Message" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>33</pd:startX>
+    <pd:startY>149</pd:startY>
+    <pd:returnBindings>
+        <root>
+            <Threadname>
+                <xsl:value-of select="info:GetThreadInfo()"/>
+            </Threadname>
+        </root>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Threadname" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>1011</pd:endX>
+    <pd:endY>142</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1471092121413</pd:targetNamespace>
+    <pd:group name="Group">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>330</pd:x>
+        <pd:y>11</pd:y>
+        <pd:width>449</pd:width>
+        <pd:height>218</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>while</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:indexSlot>i</pd:indexSlot>
+            <pd:outSlot>pm</pd:outSlot>
+            <pd:activityOutputName>ProcessMessage</pd:activityOutputName>
+            <pd:whileCondition>$i &lt; 4</pd:whileCondition>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>ProcessMessage</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>ProcessMessage-2</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>ProcessMessage</pd:from>
+            <pd:to>ProcessMessage-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>ProcessMessage-1</pd:from>
+            <pd:to>ProcessMessage-2</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="ProcessMessage">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>432</pd:x>
+            <pd:y>80</pd:y>
+            <config>
+                <processName>/Miscellaneous/Subprocess/ProcessMessage.process</processName>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:if test="$Start/root/Message">
+                        <Message>
+                            <xsl:value-of select="$Start/root/Message"/>
+                        </Message>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="ProcessMessage-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>529</pd:x>
+            <pd:y>155</pd:y>
+            <config>
+                <processName>/Miscellaneous/Subprocess/ProcessMessage.process</processName>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <Message>
+                        <xsl:value-of select="$ProcessMessage/root/Output"/>
+                    </Message>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="ProcessMessage-2">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>659</pd:x>
+            <pd:y>72</pd:y>
+            <config>
+                <processName>/Miscellaneous/Subprocess/ProcessMessage.process</processName>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <Message>
+                        <xsl:value-of select="$ProcessMessage-1/root/Output"/>
+                    </Message>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="Java Code">
+        <pd:type>com.tibco.plugin.java.JavaActivity</pd:type>
+        <pd:resourceType>ae.javapalette.javaActivity</pd:resourceType>
+        <pd:x>156</pd:x>
+        <pd:y>148</pd:y>
+        <config>
+            <fileName>MultiProcessMessageJavaCode</fileName>
+            <packageName>Miscellaneous.MultiProcessMessage</packageName>
+            <fullsource>package Miscellaneous.MultiProcessMessage;
+import java.util.*;
+import java.io.*;
+public class MultiProcessMessageJavaCode{
+/****** START SET/GET METHOD, DO NOT MODIFY *****/
+	protected String ThreadName = "";
+	public String getThreadName() {
+		return ThreadName;
+	}
+	public void setThreadName(String val) {
+		ThreadName = val;
+	}
+/****** END SET/GET METHOD, DO NOT MODIFY *****/
+	public MultiProcessMessageJavaCode() {
+	}
+	public void invoke() throws Exception {
+/* Available Variables: DO NOT MODIFY
+	In  : String ThreadName
+* Available Variables: DO NOT MODIFY *****/
+
+		Thread.currentThread().setName(ThreadName);}
+}
+</fullsource>
+            <inputData>
+                <row>
+                    <fieldName>ThreadName</fieldName>
+                    <fieldType>string</fieldType>
+                    <fieldRequired>optional</fieldRequired>
+                </row>
+            </inputData>
+            <byteCode>
+                <class>
+                    <name>MultiProcessMessageJavaCode</name>
+                    <byteCode>yv66vgAAADIAJAkABgAXCgAHABgIABkKABoAGwoAGgAcBwAdBwAeAQAKVGhyZWFkTmFtZQEAEkxqYXZhL2xhbmcvU3RyaW5nOwEADWdldFRocmVhZE5hbWUBABQoKUxqYXZhL2xhbmcvU3RyaW5nOwEABENvZGUBAA9MaW5lTnVtYmVyVGFibGUBAA1zZXRUaHJlYWROYW1lAQAVKExqYXZhL2xhbmcvU3RyaW5nOylWAQAGPGluaXQ+AQADKClWAQAGaW52b2tlAQAKRXhjZXB0aW9ucwcAHwEAClNvdXJjZUZpbGUBACBNdWx0aVByb2Nlc3NNZXNzYWdlSmF2YUNvZGUuamF2YQwACAAJDAAQABEBAAAHACAMACEAIgwAIwAPAQA9TWlzY2VsbGFuZW91cy9NdWx0aVByb2Nlc3NNZXNzYWdlL011bHRpUHJvY2Vzc01lc3NhZ2VKYXZhQ29kZQEAEGphdmEvbGFuZy9PYmplY3QBABNqYXZhL2xhbmcvRXhjZXB0aW9uAQAQamF2YS9sYW5nL1RocmVhZAEADWN1cnJlbnRUaHJlYWQBABQoKUxqYXZhL2xhbmcvVGhyZWFkOwEAB3NldE5hbWUAIQAGAAcAAAABAAQACAAJAAAABAABAAoACwABAAwAAAAdAAEAAQAAAAUqtAABsAAAAAEADQAAAAYAAQAAAAgAAQAOAA8AAQAMAAAAIgACAAIAAAAGKiu1AAGxAAAAAQANAAAACgACAAAACwAFAAwAAQAQABEAAQAMAAAAKwACAAEAAAALKrcAAioSA7UAAbEAAAABAA0AAAAOAAMAAAAOAAQABgAKAA8AAQASABEAAgAMAAAAIwACAAEAAAALuAAEKrQAAbYABbEAAAABAA0AAAAGAAEAAAAVABMAAAAEAAEAFAABABUAAAACABY=</byteCode>
+                </class>
+            </byteCode>
+        </config>
+        <pd:inputBindings>
+            <javaCodeActivityInput>
+                <ThreadName>
+                    <xsl:value-of select="concat($_processContext/ns:ProcessContext/ProjectName,&quot;-&quot;,$_processContext/ns:ProcessContext/ProcessId)"/>
+                </ThreadName>
+            </javaCodeActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Group</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Java Code</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Java Code</pd:from>
+        <pd:to>Group</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

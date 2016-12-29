@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pfx="http://www.tibco.com/pe/EngineTypes" xmlns:info="java://Common.Info" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns2="com/tibco/pe/commands" xmlns:ns1="http://www.tibco.com/schemas/BWTestStubsforEMSFramework/Miscellaneous/Schema.xsd" xmlns:ns3="www.tibco.com/plugin/Sleep" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx4="http://xmlns.example.com/1474010482520" xmlns:pfx3="www.tibco.com/plugin/java/JavaMethodActivityInput" xmlns:pfx2="http://schemas.westpac.com.au/wib/icc/fx/service/tradenotification-1-0">
+    <wsdl:import namespace="http://schemas.westpac.com.au/wib/icc/fx/service/tradenotification-1-0"/>
+    <wsdl:import namespace="http://xmlns.example.com/1474010482520" location="/Miscellaneous/WSDL/SendRT.wsdl"/>
+    <pd:name>ASyncConsumers/ServiceProvider-ASync_SOAP(EMS).process</pd:name>
+    <pd:startName>SOAPEventSource</pd:startName>
+    <pd:startX>0</pd:startX>
+    <pd:startY>0</pd:startY>
+    <pd:returnBindings/>
+    <pd:starter name="SOAPEventSource">
+        <pd:type>com.tibco.plugin.soap.SOAPEventSource</pd:type>
+        <pd:resourceType>ae.activities.SOAPEventSourceUI</pd:resourceType>
+        <pd:x>78</pd:x>
+        <pd:y>103</pd:y>
+        <config>
+            <service>pfx4:PortType</service>
+            <wsdlNamespaceRoot>http://xmlns.example.com/1474010482520/SendRTImpl</wsdlNamespaceRoot>
+            <operation>SendRT</operation>
+            <portAddressPrefix/>
+            <operationStyle>document</operationStyle>
+            <soapUse>literal</soapUse>
+            <embedWsdlComponents>true</embedWsdlComponents>
+            <embedSchemaComponents>true</embedSchemaComponents>
+            <soapAction>/ASyncConsumers/ServiceProvider-Soap-ASync</soapAction>
+            <sharedChannel>/Miscellaneous/Connections/JMS Connection.sharedjmscon</sharedChannel>
+            <sharedChannels>
+                <jmsChannel>
+                    <JMSDestinationType>queue</JMSDestinationType>
+                    <JMSAcknowledgementMode>2</JMSAcknowledgementMode>
+                    <JMSTo>%%QueueForBWConsumer%%</JMSTo>
+                    <JMSMessageType>Text</JMSMessageType>
+                    <JMSMaxSessions>%%NoOfSessions%%</JMSMaxSessions>
+                </jmsChannel>
+            </sharedChannels>
+            <soapVersion>SOAP 1.1</soapVersion>
+            <soapAttachmentStyle>SwA</soapAttachmentStyle>
+        </config>
+        <pd:inputBindings/>
+    </pd:starter>
+    <pd:endName>End</pd:endName>
+    <pd:endX>935</pd:endX>
+    <pd:endY>109</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1464027753762</pd:targetNamespace>
+    <pd:activity name="ConfirmTheMessageforDeleteionfromEMS">
+        <pd:type>com.tibco.pe.core.ConfirmActivity</pd:type>
+        <pd:resourceType>activity.confirm</pd:resourceType>
+        <pd:x>792</pd:x>
+        <pd:y>107</pd:y>
+        <config>
+            <ConfirmEvent>SOAPEventSource</ConfirmEvent>
+        </config>
+        <pd:inputBindings/>
+    </pd:activity>
+    <pd:activity name="ProcessMessage">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>238</pd:x>
+        <pd:y>102</pd:y>
+        <config>
+            <processName>/Miscellaneous/Subprocess/ProcessMessage.process</processName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <Message>
+                    <xsl:value-of select="tib:render-xml($SOAPEventSource/inputMessage/ns1:RuntimeInfo)"/>
+                </Message>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Null">
+        <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+        <pd:resourceType>ae.activities.null</pd:resourceType>
+        <pd:x>552</pd:x>
+        <pd:y>268</pd:y>
+        <config/>
+        <pd:inputBindings/>
+    </pd:activity>
+    <pd:activity name="SOAPSendReply">
+        <pd:type>com.tibco.plugin.soap.SOAPSendReplyActivity</pd:type>
+        <pd:resourceType>ae.activities.SOAPSendReplyUI</pd:resourceType>
+        <pd:x>511</pd:x>
+        <pd:y>103</pd:y>
+        <config>
+            <eventSource>SOAPEventSource</eventSource>
+        </config>
+        <pd:inputBindings>
+            <outputMessage>
+                <part1>
+                    <xsl:value-of select="$ProcessMessage/root/Output"/>
+                </part1>
+            </outputMessage>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>ConfirmTheMessageforDeleteionfromEMS</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>ProcessMessage</pd:from>
+        <pd:to>SOAPSendReply</pd:to>
+        <pd:xpathDescription>ReplyTo Queue exists</pd:xpathDescription>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>xpath</pd:conditionType>
+        <pd:xpath>exists($SOAPEventSource/inputMessage/TransportProperties/JMSHeaders/ns:JMSReplyTo)</pd:xpath>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>ProcessMessage</pd:from>
+        <pd:to>Null</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>otherwise</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Null</pd:from>
+        <pd:to>ConfirmTheMessageforDeleteionfromEMS</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>SOAPEventSource</pd:from>
+        <pd:to>ProcessMessage</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>SOAPSendReply</pd:from>
+        <pd:to>ConfirmTheMessageforDeleteionfromEMS</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>
