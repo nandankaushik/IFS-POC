@@ -41,17 +41,18 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>ConsumerTemplate.ConsumersCreater</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EMSFrameworkLibrary">
-      <HintPath>..\..\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSFrameworkLibrary.dll</HintPath>
+    <Reference Include="EMSFrameworkLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />

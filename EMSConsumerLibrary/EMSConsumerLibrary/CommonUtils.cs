@@ -7,7 +7,7 @@ using TIBCO.EMS.ADMIN;
 using TIBCO.EMS;
 
 
-namespace Messaging.EMS.Test
+namespace Messaging.EMS
 {
     public class CommonUtils
     {
@@ -81,14 +81,14 @@ namespace Messaging.EMS.Test
         {
             /*
              *This will create a seperate Admin Connection to EMS .A normal EMS client may not be given
-             *EMS admin credentials , hence this function is not for everyone except Admin
+             *EMS admin credentials , hence this function is not for everyone , except Admin
              * 
              */
             try
             {
 
                 QueueInfo queue = new QueueInfo(QueueName);
-                string url = System.Configuration.ConfigurationManager.ConnectionStrings["EMSServerURL"].ConnectionString;
+                string url = System.Configuration.ConfigurationManager.ConnectionStrings["JmsProviderUrl"].ConnectionString;
                 string user = System.Configuration.ConfigurationManager.ConnectionStrings["username"].ConnectionString; ;
                 string password = System.Configuration.ConfigurationManager.ConnectionStrings["password"].ConnectionString;
                 Admin admin = new Admin(url, user, password);
@@ -116,6 +116,29 @@ namespace Messaging.EMS.Test
 
             }
         }
+
+
+
+        /*
+          This implementation is more for illustrative purppose for SSL Hostname verification . Any thing specific to verification ,
+          * either call this version itself or  override in the base class.
+          */
+        public virtual bool verifyHost(Object source, EMSSSLHostNameVerifierArgs args)
+        {
+
+         
+
+            System.Console.WriteLine("-------------------------------------------");
+            System.Console.WriteLine("HostNameVerifier: "
+                                     + "certCN = [" + args.m_certificateCommonName + "]\n"
+                                     + "connected Host = [" + args.m_connectedHostName + "]\n"
+                                     + "expected Host = [" + args.m_targetHostName + "]");
+            System.Console.WriteLine("-------------------------------------------");
+
+
+            return true;
+        }
+        public CommonUtils() { }
     }
 
         

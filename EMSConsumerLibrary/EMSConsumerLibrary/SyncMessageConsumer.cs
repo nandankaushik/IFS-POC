@@ -15,7 +15,7 @@ namespace Messaging.EMS.SyncMessageConsumers
 
         //protected String EMSQueueName;
         //protected int  NoOfSessions;
-        public SyncMessageConsumerUsingReceieve (string EMSQueueName,int  NoOfSessions )
+       public SyncMessageConsumerUsingReceieve(string EMSQueueName, int NoOfSessions, Boolean KeepAlive)
         {
                       for (int i = 0; i < NoOfSessions ;i++)
             {
@@ -32,8 +32,15 @@ namespace Messaging.EMS.SyncMessageConsumers
     {
    
         this.ReceiveAndProcessMessage(ReceivedMessage);
-        
-    }
+        if (!KeepAlive) break; /* With NoOfSessions=1 and KeepAlive=false , achieves effect of a single Receive call that
+                                * returns as and when message is received. NoOfSessions > 1 and KeepAlive=false  achieves concurrent
+                                * consumption thats one-time i.e as soon as processing is completed ,so is the thread. 
+                                * Sync. consumer will be required when a flow triggered by some non-ems mechanism/protocol needs to 
+                                * fetch messages off EMS . Most likely, NoOfSessions=1 and KeepAlive=false  in this sceanrio.
+                                * Main thread does not wait for the threads to finish , however multiple receivers/consumers so created 
+                                * will be destroyed all at once and not one-by-one.
+                                */
+}
 
    
 }
@@ -46,6 +53,9 @@ namespace Messaging.EMS.SyncMessageConsumers
     
                 
             }
+
+
+                      
         }
 
      public virtual   void ReceiveAndProcessMessage(Message msg)

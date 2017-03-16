@@ -7,7 +7,7 @@ using System.Threading;
 using System.Configuration;
 using System.Diagnostics;
 using TIBCO.EMS;
-using Messaging.EMS.Test;
+using Messaging.EMS;
 using Messaging.EMS.AsyncMessageConsumers;
 using Messaging.EMS.Producers;
 namespace ConsumerTemplate
@@ -37,7 +37,7 @@ namespace ConsumerTemplate
          try {
 
 
-             Messaging.EMS.Test.CommonUtils.ProcessEMSMessage(msg);
+             Messaging.EMS.CommonUtils.ProcessEMSMessage(msg);
      
  }
 

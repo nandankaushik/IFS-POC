@@ -60,7 +60,7 @@ namespace Messaging.EMS.AsyncMessageConsumers
                 }
 
                 EMSQueueConnection.connection.Start();
-               // EMSQueueConnection.connection.ExceptionListener = this;
+               // Start pub-sub messages
             
        
 

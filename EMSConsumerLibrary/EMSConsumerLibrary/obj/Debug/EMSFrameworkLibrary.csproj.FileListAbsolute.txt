@@ -1,6 +1,6 @@
-C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSFrameworkLibrary.dll.config
-C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSFrameworkLibrary.dll
-C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\Debug\EMSFrameworkLibrary.pdb
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.dll
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.pdb
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll.config
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll
+C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.pdb
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.csprojResolveAssemblyReference.cache

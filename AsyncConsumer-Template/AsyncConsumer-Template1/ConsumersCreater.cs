@@ -44,7 +44,7 @@ namespace ConsumerTemplate
                     new ConsumerForDULDXXXX(QueueName, NoOfSessions);
                     break;
                 case "Sync-Receive":
-                    new SyncConsumerForDULDXXXX(QueueName,NoOfSessions);
+                    new SyncConsumerForDULDXXXX(QueueName,NoOfSessions, false);
                     break;
                 case "Async-Both":
                     if (NoOfSessions < 2)
@@ -65,7 +65,7 @@ namespace ConsumerTemplate
 
             }
 
-            Messaging.EMS.Test.CommonUtils.printConsumers(QueueName);
+            Messaging.EMS.CommonUtils.printConsumers(QueueName);
 
             
 
