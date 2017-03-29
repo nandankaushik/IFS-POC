@@ -4,3 +4,11 @@ C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.pdb
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.csprojResolveAssemblyReference.cache
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll.config
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.pdb
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.csprojResolveAssemblyReference.cache
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.dll
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\obj\Debug\EMSFrameworkLibrary.pdb
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll.CodeAnalysisLog.xml
+C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\EMSConsumerLibrary\EMSConsumerLibrary\bin\EMSFrameworkLibrary.dll.lastcodeanalysissucceeded

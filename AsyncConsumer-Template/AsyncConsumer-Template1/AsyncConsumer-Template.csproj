@@ -32,7 +32,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -69,6 +69,10 @@
     <Reference Include="TIBCO.EMS, Version=1.0.630.5, Culture=neutral, PublicKeyToken=5b83db8ff05c64ba, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Entwicklung\TibcoEms\ems\6.3\samples\cs\TIBCO.EMS.dll</HintPath>
+    </Reference>
+    <Reference Include="TIBCO.EMS.UFO, Version=1.0.630.5, Culture=neutral, PublicKeyToken=6b6855d6ce77bb55, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Entwicklung\TibcoEms\ems\6.3\samples\cs\TIBCO.EMS.UFO.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

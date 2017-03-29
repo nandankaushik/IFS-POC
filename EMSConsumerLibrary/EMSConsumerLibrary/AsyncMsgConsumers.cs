@@ -12,7 +12,7 @@ using Messaging.EMS.Connection;
 
 namespace Messaging.EMS.AsyncMessageConsumers
 {
-
+    
 
     public class AsyncMessageConsumerUsingMessageListener : TIBCO.EMS.IExceptionListener, TIBCO.EMS.IMessageListener
     {
@@ -36,12 +36,15 @@ namespace Messaging.EMS.AsyncMessageConsumers
     
             try
             {
-             
 
+             
                 for (int i = 0; i < NoOfSessions; i++)
                 {
-
+                    /*
+                      Create a new session which in turn creates a thread interanlly .
+                     * Ack mode is hard coded for now , see no possibulty for  it being other than CLient_ack*/
                     session = EMSQueueConnection.connection.CreateSession(false, Session.CLIENT_ACKNOWLEDGE);
+                                    
                    // create the consumer
                     if (destination == null) destination = session.CreateQueue(QueueName);
                       msgConsumer = session.CreateConsumer(destination);
