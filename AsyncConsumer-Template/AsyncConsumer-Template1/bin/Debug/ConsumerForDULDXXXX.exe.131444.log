@@ -1,0 +1,383 @@
+
+
+
+----------------------------------------------------------
+  ConnectionId : 26
+
+  ConsumerID : 40
+
+  SessionId : 77
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_5156
+----------------------------------------------------------
+  ConnectionId : 26
+
+  ConsumerID : 41
+
+  SessionId : 78
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_5156
+----------------------------------------------------------
+  ConnectionId : 26
+
+  ConsumerID : 42
+
+  SessionId : 79
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_5156
+----------------------------------------------------------
+  ConnectionId : 26
+
+  ConsumerID : 43
+
+  SessionId : 80
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_5156
+----------------------------------------------------------
+  ConnectionId : 26
+
+  ConsumerID : 44
+
+  SessionId : 81
+
+  DestinationName : Consumers.For.DULDXXXX.q1
+
+  ThreadName : LAP-TZ-0X60753_ConsumersForDULDXXXX_5156
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-79":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686158:34} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:47:18 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  FF  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendMessage.process
+ 
+} }
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-80":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686158:35} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:47:18 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  FF  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendMessage.process
+ 
+} }
+
+=================== No reply sought for above  message as ReplyQueue is NUll . Threadname is "Explicit Thread for Session-80"
+
+ MethodCallingSequence /*Most Recent at the top*/ :
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart()
+
+*********************************************************************************************************************************
+
+=================== No reply sought for above  message as ReplyQueue is NUll . Threadname is "Explicit Thread for Session-79"
+
+ MethodCallingSequence /*Most Recent at the top*/ :
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart()
+
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-81":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686158:36} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:47:18 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  FF  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendMessage.process
+ 
+} }
+
+=================== No reply sought for above  message as ReplyQueue is NUll . Threadname is "Explicit Thread for Session-81"
+
+ MethodCallingSequence /*Most Recent at the top*/ :
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart()
+
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-77":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686158:37} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:47:18 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  FF  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendMessage.process
+ 
+} }
+
+=================== No reply sought for above  message as ReplyQueue is NUll . Threadname is "Explicit Thread for Session-77"
+
+ MethodCallingSequence /*Most Recent at the top*/ :
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart()
+
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-78":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686158:38} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:47:18 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  FF  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199000
+  BW-ThreadName :  JobCourier7 
+  BW-Processname : Producers/SendMessage.process
+ 
+} }
+
+=================== No reply sought for above  message as ReplyQueue is NUll . Threadname is "Explicit Thread for Session-78"
+
+ MethodCallingSequence /*Most Recent at the top*/ :
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart()
+
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-79":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68615E:39} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.193457EB68615F.23]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:48:26 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199001
+  BW-ThreadName :  JobCourier6 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 5156
+ ThreadName:"Explicit Thread for Session-79"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 96
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-80":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686161:40} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.193457EB686162.24]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:48:26 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199001
+  BW-ThreadName :  JobCourier5 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 5156
+ ThreadName:"Explicit Thread for Session-80"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 99
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-81":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686164:41} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.193457EB686165.25]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:48:26 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199001
+  BW-ThreadName :  JobCourier4 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 5156
+ ThreadName:"Explicit Thread for Session-81"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 102
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-77":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB686167:42} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.193457EB686168.26]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:48:26 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199001
+  BW-ThreadName :  JobCourier3 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 5156
+ ThreadName:"Explicit Thread for Session-77"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 105
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************
+
+*********************************************************************************************************************************
+
+=================== Message Received by the Thread "Explicit Thread for Session-78":
+   TextMessage={ Header={ MessageID={ID:E4EMS-SERVER.193457EB68616A:43} Destination={Queue[Consumers.For.DULDXXXX.q1]} ReplyTo={Queue[$TMP$.E4EMS-SERVER.193457EB68616B.27]} DeliveryMode={Persistent} Redelivered={False} CorrelationID={} MsgType={} Timestamp={9/28/2016 7:48:26 AM} Expiration={0} Priority={4} } Properties={ } Text={
+ 
+  RR  text msg sent  from Machine : lap-tz-0x60753
+  BW-Project : BWTestStubsforEMSFramework
+  BW-Jobid : 199001
+  BW-ThreadName :  JobCourier2 
+  BW-Processname : Producers/SendRequest.process
+ 
+} }
+
+=================== This Reply has been sent:   
+
+Replying with .NET runtime specific info :
+
+
+ MachineName: LAP-TZ-0X60753
+ ReplyingProcessName: ConsumersForDULDXXXX
+ ReplyingProcessId: 5156
+ ThreadName:"Explicit Thread for Session-78"
+ ClientId: BE-ING-IFS-LAMS
+ New Producer SessionId used for reply: 108
+ MethodCallingSequence /*Most Recent at the top*/:
+
+	 (1) Void ProcessEMSMessage(TIBCO.EMS.Message)
+	 (2) Void ReceiveAndProcessMessage(TIBCO.EMS.Message)
+	 (3) Void <.ctor>b__0()
+	 (4) Void ThreadStart_Context(System.Object)
+	 (5) Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (6) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+	 (7) Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+	 (8) Void ThreadStart() 
+
+ 
+*********************************************************************************************************************************

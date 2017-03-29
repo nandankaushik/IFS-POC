@@ -38,7 +38,6 @@ namespace ConsumerTemplate
 
 
              Messaging.EMS.CommonUtils.ProcessEMSMessage(msg);
-
      
  }
 
@@ -68,22 +67,6 @@ namespace ConsumerTemplate
       
       
       
-
-    }
-
-    partial class CommonUtils : Messaging.EMS.CommonUtils
-    {
-
-        public override bool verifyHost(object source, EMSSSLHostNameVerifierArgs args)
-        {
-            
-            /*
-             Override this methid for any specifci hostname checks 
-             */
-            Console.WriteLine("The overriden verifyHost");
-            return base.verifyHost(source, args);
-        }
-
 
     }
 }
