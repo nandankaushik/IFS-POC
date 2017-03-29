@@ -22,9 +22,7 @@ namespace Messaging.EMS
             {
 
 
-                Console.WriteLine(separator2 + " Message Received by the Thread \"" + Thread.CurrentThread.Name + "\" with Thread-Id "+
-                    
-                  Thread.CurrentThread.ManagedThreadId +  "\n   " + msg.ToString());
+                Console.WriteLine(separator2 + " Message Received by the Thread \"" + Thread.CurrentThread.Name + "\":\n   " + msg.ToString());
                 StackTrace stackTrace = new StackTrace();
                 String methodcallingsequence = ""; int methodnumber = 1;
                 Session ProducerSession = Messaging.EMS.Connection.EMSQueueConnection.connection.CreateSession(false, Session.AUTO_ACKNOWLEDGE);
@@ -90,7 +88,7 @@ namespace Messaging.EMS
             {
 
                 QueueInfo queue = new QueueInfo(QueueName);
-                string url = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextURL"].ConnectionString;
+                string url = System.Configuration.ConfigurationManager.ConnectionStrings["JmsProviderUrl"].ConnectionString;
                 string user = System.Configuration.ConfigurationManager.ConnectionStrings["username"].ConnectionString; ;
                 string password = System.Configuration.ConfigurationManager.ConnectionStrings["password"].ConnectionString;
                 Admin admin = new Admin(url, user, password);
@@ -128,8 +126,8 @@ namespace Messaging.EMS
         public virtual bool verifyHost(Object source, EMSSSLHostNameVerifierArgs args)
         {
 
+         
 
-            /*
             System.Console.WriteLine("-------------------------------------------");
             System.Console.WriteLine("HostNameVerifier: "
                                      + "certCN = [" + args.m_certificateCommonName + "]\n"
@@ -137,7 +135,7 @@ namespace Messaging.EMS
                                      + "expected Host = [" + args.m_targetHostName + "]");
             System.Console.WriteLine("-------------------------------------------");
 
-            */
+
             return true;
         }
         public CommonUtils() { }

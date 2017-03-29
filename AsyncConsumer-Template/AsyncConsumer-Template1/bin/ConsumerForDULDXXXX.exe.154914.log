@@ -1,0 +1,69 @@
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\1024b-rsa-example-cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\2048b-dsa-example-cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\CA.crt is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\CA.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\Client.cer is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\client.cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\client_root.cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\ForOutook.cer is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\frank4dd-cacert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\ia.crt is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\ia.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\SampleAuthority.cer is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\SampleAuthority.cert is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\SampleAuthorityforEMSServer.cert is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\SampleAuthority_for_EMSServer.cer is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\server.cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\server_root.cert.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\test_client_ca.pem is imported into the CertStore
+
+D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\test_client_cert.pem is imported into the CertStore
+
+
+ TargetHostName=www.example.com
+ CA_Certificate=D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\server_root.cert.pem
+ EMSServercertiFicate=D:\Entwicklung\TibcoEms\ems\6.3\samples\certs\server.cert.pem
+
+
+-------------------------------------------
+HostNameVerifier: certCN = [www.example.com]
+connected Host = [localhost]
+expected Host = [www.example.com]
+-------------------------------------------
+End of all threads in this fucntion
+Exception Occured:   at TIBCO.EMS.ADMIN.MessengerUtil..ctor(String url, String username, String password, Hashtable sslParams)
+   at TIBCO.EMS.ADMIN.Admin..ctor(String url, String userName, String password)
+   at Messaging.EMS.CommonUtils.printConsumers(String QueueName) in c:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\EMSConsumerLibrary\EMSConsumerLibrary\CommonUtils.cs:line 94
+
+
+********** On EMSExceptionEvent **********
+
+********** ThreadName:EMS TCPLink Reader (Server-88)
+
+********** Exception Message: Connection has been terminated
+
+********** Sender Object:QueueConnection[ClientId=BE-ING-IFS-LAMS Closed, URL=ssl://lap-tz-0x60753:7243]
+
+********** Stacktrace:
+
+********** Source:
+
+********** TargetSite:

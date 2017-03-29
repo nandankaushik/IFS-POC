@@ -19,11 +19,3 @@ C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Temp
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template\AsyncConsumer-Template1\obj\Debug\ConsumersForDULDXXXX.pdb
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template\AsyncConsumer-Template1\bin\Debug\ConsumersForDULDXXXX.exe.CodeAnalysisLog.xml
 C:\Users\nandan.kaushik\Documents\Visual Studio 2013\Projects\AsyncConsumer-Template\AsyncConsumer-Template1\bin\Debug\ConsumersForDULDXXXX.exe.lastcodeanalysissucceeded
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\obj\Debug\ConsumersForDULDXXXX.exe
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\obj\Debug\ConsumersForDULDXXXX.pdb
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\bin\ConsumersForDULDXXXX.exe.config
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\bin\ConsumersForDULDXXXX.exe
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\bin\ConsumersForDULDXXXX.pdb
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\bin\EMSFrameworkLibrary.dll
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\bin\EMSFrameworkLibrary.pdb
-C:\Users\nandan.kaushik\Documents\GitHub\IFS-POC\AsyncConsumer-Template\AsyncConsumer-Template1\obj\Debug\AsyncConsumer-Template.csprojResolveAssemblyReference.cache
