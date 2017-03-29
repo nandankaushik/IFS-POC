@@ -28,159 +28,171 @@ namespace Messaging
                 public static QueueConnection connection;  /* The Connection memeber is static because it has to be 
                                                             called by Static Constructor*/
                 //public QueueConnectionFactory qcf;
+                static LookupContext LC;
 
-
-          
-
-                static EMSQueueConnection()  /* Static Constructor for creating Connection at Start-up */
+                static void SetEnvironment()
                 {
 
-                    EMSSSL EMSSSL;
-                    LookupContext LookupContext;
                     //    Configuration SSL = (Configuration)System.Configuration.ConfigurationManager.GetSection("SSL");
-                        string password = System.Configuration.ConfigurationManager.ConnectionStrings["password"].ConnectionString;
-                        string Username = System.Configuration.ConfigurationManager.ConnectionStrings["username"].ConnectionString;
-                        string ClientID = System.Configuration.ConfigurationManager.ConnectionStrings["Client-ID"].ConnectionString;
-                        string JNDIContextURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextURL"].ConnectionString;
-                        string QueueConnectionFactory = System.Configuration.ConfigurationManager.ConnectionStrings["QueueConnectionFactory"].ConnectionString;
-                        
-                        Hashtable Environment = new Hashtable();    
-                        Environment.Add(LookupContext.SECURITY_PRINCIPAL, Username);
-                        Environment.Add(LookupContext.SECURITY_CREDENTIALS, password);
+                    string password = System.Configuration.ConfigurationManager.ConnectionStrings["password"].ConnectionString;
+                    string Username = System.Configuration.ConfigurationManager.ConnectionStrings["username"].ConnectionString;
+                    string JNDIContextURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextURL"].ConnectionString;
+                    string Security_Protocol = System.Configuration.ConfigurationManager.ConnectionStrings["Security_Protocol"].ConnectionString;
+                    Hashtable Environment = new Hashtable();
+                    Environment.Add(LookupContext.SECURITY_PRINCIPAL, Username);
+                    Environment.Add(LookupContext.SECURITY_CREDENTIALS, password);
                     //    Environment.Add(LookupContext.PROVIDER_URL, JNDIContextURL);
-                    
-                        /*SSL Connection creation  start  */
-                        try
+                     try
+                    {
+                      
+                    switch (Security_Protocol )
+                    { 
+                        case "ssl" :
+                    /*SSL Connection creation  start  */
+                     EMSSSLFileStoreInfo storeInfo = new EMSSSLFileStoreInfo();
+                        string TargetHostName = System.Configuration.ConfigurationManager.ConnectionStrings["TargetHostName"].ConnectionString;
+
+                        //  EMSSSL.SetTargetHostName(TargetHostName);
+                        
+                        string JNDIContextSSLURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextSSLURL"].ConnectionString;
+                        string EMSServercertiFicate = System.Configuration.ConfigurationManager.ConnectionStrings["EMSServercertiFicate"].ConnectionString;
+                        string CA_Certificate = System.Configuration.ConfigurationManager.ConnectionStrings["CA-CertiFicate"].ConnectionString;
+                        string ssl_trace = System.Configuration.ConfigurationManager.ConnectionStrings["ssl_trace"].ConnectionString;
+                        string CertStore = System.Configuration.ConfigurationManager.ConnectionStrings["CertStore"].ConnectionString;
+
+
+
+                        /* Standard practice is to specifiy the folder of certs to be individually imported in the TrustStore. Seen it in BW to 
+                         * work better. Also supports incremental testing  by placing one cert at a time.The root cert should be in Windows Central store. 
+                         * Preferably  left to support people to import the same Or  use EMSSSL class...
+                         */
+                        foreach (string filename in System.IO.Directory.GetFiles(CertStore))
                         {
-                            EMSSSLFileStoreInfo storeInfo = new EMSSSLFileStoreInfo();
-                            string TargetHostName = System.Configuration.ConfigurationManager.ConnectionStrings["TargetHostName"].ConnectionString;
-                           
-                          //  EMSSSL.SetTargetHostName(TargetHostName);
-                            string JmsSslProviderUrl = System.Configuration.ConfigurationManager.ConnectionStrings["JmsSslProviderUrl"].ConnectionString;
-                            string JNDIContextSSLURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextSSLURL"].ConnectionString;
-                            string EMSServercertiFicate = System.Configuration.ConfigurationManager.ConnectionStrings["EMSServercertiFicate"].ConnectionString;
-                            string CA_Certificate = System.Configuration.ConfigurationManager.ConnectionStrings["CA-CertiFicate"].ConnectionString;
-                            string ssl_trace = System.Configuration.ConfigurationManager.ConnectionStrings["ssl_trace"].ConnectionString;
-                            string TrustStore = System.Configuration.ConfigurationManager.ConnectionStrings["TrustStore"].ConnectionString;
-                           
 
-                          
-                         /* Standard practice is to specifiy the folder of certs to be individually imported in the TrustStore. Seen it in BW to 
-                          * work better. Also supports incremental testing  by placing one cert at a time.The root cert should be in Windows Central store. 
-                          * Preferably  left to support people to import the same Or  use EMSSSL class...
-                          */
-                            foreach ( string filename in System.IO.Directory.GetFiles(TrustStore))
+                            try
                             {
-
-                                try
-                                {
-                                    storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(filename));
-                                }
-
-                                catch (Exception E)
-                                {
-                                    Console.WriteLine("\nNot imported into the TrustStore:" + filename ); 
-                                    /*replce this writeln  with Debug/Error logging using E object*/
-                                                                       ;
-
-                                }
-                                    
+                                storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(filename));
                             }
 
+                            catch (Exception E)
+                            {
+                                Console.WriteLine("\nNot imported into the TrustStore : " + filename);
+                                /*replce this writeln  with Debug/Error logging using E object*/
+                                ;
+
+                            }
+
+                        }
 
 
-                            storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(EMSServercertiFicate));
 
+                        storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(EMSServercertiFicate));
+
+
+                        Console.WriteLine("\n\n TargetHostName=" + TargetHostName + "\n CA_Certificate=" + CA_Certificate + "\n EMSServercertiFicate=" + EMSServercertiFicate + "\n\n");
+
+
+                        Environment.Add(LookupContext.PROVIDER_URL, JNDIContextSSLURL);
+                        Environment.Add(LookupContext.SSL_TRACE, ssl_trace);
+                        Environment.Add(LookupContext.SSL_STORE_TYPE, EMSSSLStoreType.EMSSSL_STORE_TYPE_FILE);
+                        Environment.Add(LookupContext.SECURITY_PROTOCOL, "ssl");
+                        Environment.Add(LookupContext.SSL_HOST_NAME_VERIFIER, new EMSSSLHostNameVerifier(new Messaging.EMS.CommonUtils().verifyHost));
+                        Environment.Add(LookupContext.SSL_TARGET_HOST_NAME, TargetHostName);
+                        Environment.Add(LookupContext.SSL_STORE_INFO, storeInfo);
+                        
+                        break ;
+                        case "tcp":
+                        Environment.Add(LookupContext.PROVIDER_URL, JNDIContextURL);
+                            break;
+                    }
+
+                    LC = new LookupContext(Environment);
+                    
+                     }
+                    catch (Exception E)
+                    { throw E; }
+                }
+
+
+
+                static  EMSQueueConnection()  /* Static Constructor for creating Connection at Start-up */
+                {
+                    try
+                    {
+                        SetEnvironment();
+                        Hashtable Environment = LC.Settings;
+                        
+                        
+                        /* Username , password and targetHostname were already retrieved in SetEnv.At present , we are assuming 
+                         that lookup JNDI and connectiing QCF are of same provider */
+
+                        
+                        String username = Environment[LookupContext.SECURITY_PRINCIPAL].ToString();
+                        String password = Environment[LookupContext.SECURITY_CREDENTIALS].ToString();
                        
-                            Console.WriteLine("\n\n TargetHostName=" + TargetHostName + "\n CA_Certificate=" + CA_Certificate+ "\n EMSServercertiFicate=" + EMSServercertiFicate+"\n\n"); 
+                      
+
                         
 
-                          /*  Environment.Add(EMSSSL.STORE_INFO, storeInfo);
-                             Environment.Add(EMSSSL.STORE_TYPE, EMSSSLStoreType.EMSSSL_STORE_TYPE_FILE);*/
 
-
-                           
-                              //  EMSSSL.SetClientTracer(new System.IO.StreamWriter(System.Console.OpenStandardOutput()));
-                          
-                            
-
-
-                            Environment.Add(LookupContext.PROVIDER_URL, JmsSslProviderUrl);
-                            Environment.Add(LookupContext.SSL_TRACE, ssl_trace);
-                            Environment.Add(LookupContext.SSL_STORE_TYPE, EMSSSLStoreType.EMSSSL_STORE_TYPE_FILE);
-                            Environment.Add(LookupContext.SECURITY_PROTOCOL, "ssl");
-                            Environment.Add(LookupContext.SSL_HOST_NAME_VERIFIER, new EMSSSLHostNameVerifier(new Messaging.EMS.CommonUtils().verifyHost));
-                            Environment.Add(LookupContext.SSL_TARGET_HOST_NAME, TargetHostName);
-                            Environment.Add(LookupContext.SSL_STORE_INFO, storeInfo); 
-                            /*
-                             * 
-                             * 
-                             */
-                            //  EMSSSL.SetCertificateStoreType(EMSSSLStoreType.EMSSSL_STORE_TYPE_SYSTEM, storeInfo);
-                            LookupContext = new LookupContext(Environment);
-
-                   
+                        /*QCF and CLient-ID are not required for SetEnv/Lookup obviously. Hence now retriving from config. */
+                        
+                        string ClientID = System.Configuration.ConfigurationManager.ConnectionStrings["Client-ID"].ConnectionString;
+                        string QueueConnectionFactory = System.Configuration.ConfigurationManager.ConnectionStrings["QueueConnectionFactory"].ConnectionString;
+                        QueueConnectionFactory QCF = (QueueConnectionFactory)LC.Lookup(QueueConnectionFactory);
                        
-                            QueueConnectionFactory SSl_QCF = (QueueConnectionFactory)LookupContext.Lookup(QueueConnectionFactory);
-                            //QueueConnectionFactory SSl_QCF = new QueueConnectionFactory(JmsSslProviderUrl, ClientID, Environment);
-                           
-
-                           /* 
-                            Console.Write("\nSSl_QCF.GetCertificateStore().ToString()=" + SSl_QCF.GetCertificateStore().ToString()+"\n");
-                          */
-                            /*SSL Connection creation  end   */
+                        
+                        QCF.SetClientID(ClientID);
+                        Console.WriteLine("####QCF="+ QCF.ToString());
+                          if (Environment[LookupContext.SECURITY_PROTOCOL].ToString().Equals("ssl"))
+                        QCF.SetTargetHostName(Environment[LookupContext.SSL_TARGET_HOST_NAME].ToString());
 
 
-                            /* string JNDIContextURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextURL"].ConnectionString;
 
-                             QueueConnectionFactory qcf = new QueueConnectionFactory(JNDIContextURL, ClientID);
-                       
-                             if (qcf == null) Console.WriteLine("\n\nQueueConnectionFactory creation failed :" );
-                              */
-                            SSl_QCF.SetTargetHostName(TargetHostName);
-                            SSl_QCF.SetClientID(ClientID);
-                            connection = SSl_QCF.CreateQueueConnection(Username, password);
-                            connection.ExceptionHandler += new EMSExceptionHandler(_HandleException);
+                        connection = (QueueConnection)QCF.CreateQueueConnection(username, password);
 
-                            connection.Start();
-                        }
-                        catch (Exception E)
-                        {
-                            Console.WriteLine("\n###############\nERROR thrown in EMSQueueConnection Constructor  :" + E.ToString());
-                            if (E is EMSException)
-                            {
-                                EMSException je = (EMSException)E;
+                        connection.ExceptionHandler += new EMSExceptionHandler(_HandleException);
 
-                                if (je.LinkedException != null)
-                                {
-                                    System.Console.WriteLine("##### Linked Exception:");
-                                    System.Console.WriteLine(je.LinkedException.StackTrace);
-                                }
-                            }
-
-                        }
+                        connection.Start();
                     }
-              
+                    catch (Exception E)
+                    {
+                        Console.WriteLine("\n###############\nERROR thrown in EMSQueueConnection Constructor  :" + E.ToString());
+                        if (E is EMSException)
+                        {
+                            EMSException je = (EMSException)E;
+
+                            if (je.LinkedException != null)
+                            {
+                                System.Console.WriteLine("##### Linked Exception:");
+                                System.Console.WriteLine(je.LinkedException.StackTrace);
+                            }
+                        }
+
+                    }
+                }
+
                 public static void _HandleException(object sender, EMSExceptionEventArgs arg)
                 {
                     EMSException e = arg.Exception;
-                
+
                     // print the connection exception status
 
                     Console.WriteLine("\n\n********** On EMSExceptionEvent **********\n\n********** ThreadName:" + Thread.CurrentThread.Name +
                         "\n\n********** Exception Message: " + e.Message + "\n\n********** Sender Object:" + sender.ToString()
-                        + "\n\n********** Stacktrace:" + e.StackTrace + "\n\n********** Source:"+e.Source
-                         + "\n\n********** TargetSite:"+ e.TargetSite
+                        + "\n\n********** Stacktrace:" + e.StackTrace + "\n\n********** Source:" + e.Source
+                         + "\n\n********** TargetSite:" + e.TargetSite
                         );
 
-                     
+
                 }
-       
+
+
             }
+
+
+
         }
 
-
-
     }
-
 }
