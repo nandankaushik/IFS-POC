@@ -30,6 +30,7 @@ namespace ConsumerTemplate
             String MainThreadName = Environment.MachineName + "_" + CurrentProcess.ProcessName + "_" + CurrentProcess.Id;
 
             Thread.CurrentThread.Name = MainThreadName;
+            //Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
 
             string QueueName = System.Configuration.ConfigurationManager.AppSettings["QueueName"];
 
@@ -39,12 +40,12 @@ namespace ConsumerTemplate
             {
                 case "Async-Delegate" :
                     new ConsumerForDULDXXXX_UsingDelegate(QueueName, NoOfSessions);
+
+
                     break;
                 case "Async-Listener" :
                     new ConsumerForDULDXXXX(QueueName, NoOfSessions);
-                    break;
-                case "Sync-Receive":
-                    new SyncConsumerForDULDXXXX(QueueName,NoOfSessions, false);
+                   
                     break;
                 case "Async-Both":
                     if (NoOfSessions < 2)
@@ -57,6 +58,10 @@ namespace ConsumerTemplate
 
                     new ConsumerForDULDXXXX_UsingDelegate(QueueName, (int)Math.Floor((double)NoOfSessions / 2));
 
+                    break;
+
+                case "Sync-Receive":
+                    new SyncConsumerForDULDXXXX(QueueName, NoOfSessions, false);
                     break;
                 default :
                     Console.WriteLine("The Consumption Mechanism has to be Async-Delegate,Async-Listener,Async-Both or Sync-Receive ");

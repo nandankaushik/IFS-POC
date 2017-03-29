@@ -9,6 +9,10 @@ namespace Messaging.EMS.Producers
    public  class Messageproducer
     {
 
+       public Queue  GetReplyQueue (Message msg)
+
+       { return (Queue)msg.ReplyTo;  }
+
        public static void  SendMessage ( TIBCO.EMS.Message  msg , TIBCO.EMS.Queue  queue) 
 
        {
