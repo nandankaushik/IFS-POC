@@ -55,8 +55,8 @@ namespace Messaging
                         //  EMSSSL.SetTargetHostName(TargetHostName);
                         
                         string JNDIContextSSLURL = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextSSLURL"].ConnectionString;
-                        string EMSServercertiFicate = System.Configuration.ConfigurationManager.ConnectionStrings["EMSServercertiFicate"].ConnectionString;
-                        string CA_Certificate = System.Configuration.ConfigurationManager.ConnectionStrings["CA-CertiFicate"].ConnectionString;
+                        /*string EMSServercertiFicate = System.Configuration.ConfigurationManager.ConnectionStrings["EMSServercertiFicate"].ConnectionString;
+                        string CA_Certificate = System.Configuration.ConfigurationManager.ConnectionStrings["CA-CertiFicate"].ConnectionString;*/
                         string ssl_trace = System.Configuration.ConfigurationManager.ConnectionStrings["ssl_trace"].ConnectionString;
                         string CertStore = System.Configuration.ConfigurationManager.ConnectionStrings["CertStore"].ConnectionString;
 
@@ -86,11 +86,11 @@ namespace Messaging
 
 
 
-                        storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(EMSServercertiFicate));
+                        /*storeInfo.SetSSLTrustedCertificate(new System.Security.Cryptography.X509Certificates.X509Certificate(EMSServercertiFicate));
 
 
                         Console.WriteLine("\n\n TargetHostName=" + TargetHostName + "\n CA_Certificate=" + CA_Certificate + "\n EMSServercertiFicate=" + EMSServercertiFicate + "\n\n");
-
+                            */
 
                         Environment.Add(LookupContext.PROVIDER_URL, JNDIContextSSLURL);
                         Environment.Add(LookupContext.SSL_TRACE, ssl_trace);
@@ -143,10 +143,12 @@ namespace Messaging
                        
                         
                         QCF.SetClientID(ClientID);
-                        Console.WriteLine("####QCF="+ QCF.ToString());
-                          if (Environment[LookupContext.SECURITY_PROTOCOL].ToString().Equals("ssl"))
-                        QCF.SetTargetHostName(Environment[LookupContext.SSL_TARGET_HOST_NAME].ToString());
 
+                        if (Environment[LookupContext.SECURITY_PROTOCOL].ToString().Equals("ssl"))
+                        {
+                            Console.WriteLine("########### QCF=" + QCF.ToString());
+                            QCF.SetTargetHostName(Environment[LookupContext.SSL_TARGET_HOST_NAME].ToString());
+                        }
 
 
                         connection = (QueueConnection)QCF.CreateQueueConnection(username, password);

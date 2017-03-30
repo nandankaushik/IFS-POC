@@ -26,7 +26,7 @@ namespace Messaging.EMS.AsyncMessageConsumers
         public AsyncMessageConsumerUsingMessageListener(String QueueName, int NoOfSessions)
         {
 
-            EMSQueueConnection.connection.Stop();
+            EMSQueueConnection.connection.Stop(); /* Iffy if multiple clients are using the conn.  */
             this.QueueName = QueueName;
             this.NoOfSessions = NoOfSessions;
 

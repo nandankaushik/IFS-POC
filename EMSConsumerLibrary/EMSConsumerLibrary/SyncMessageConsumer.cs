@@ -70,18 +70,20 @@ namespace Messaging.EMS.SyncMessageConsumers
                Thread t1 = new Thread(() =>
                {
                    Thread.CurrentThread.Name = "Explicit Thread for Session-" + session.SessID;
-                   while ((ReceivedMessage = receiver.Receive(Timeout)) != null)
+                   if ((ReceivedMessage = receiver.Receive(Timeout)) != null)
                    {
 
                        this.ReceiveAndProcessMessage(ReceivedMessage);
-                        /* With NoOfSessions=1 and KeepAlive=false , achieves effect of a single Receive call that
-                                * returns as and when message is received. NoOfSessions > 1 and KeepAlive=false  achieves concurrent
-                                * consumption thats one-time i.e as soon as processing is completed ,so is the thread. 
-                                * Sync. consumer will be required when a flow triggered by some non-ems mechanism/protocol needs to 
-                                * fetch messages off EMS . Most likely, NoOfSessions=1 and KeepAlive=false  in this sceanrio.
-                                * Main thread does not wait for the threads to finish , however multiple receivers/consumers so created 
-                                * will be destroyed all at once and not one-by-one.
-                                */
+                       /* A Receive call that returns as and when message is received or when it timesout . Achieves concurrent
+                        * consumption thats one-time i.e as soon as processing is completed ,so is the thread. 
+                        * Sync. consumer will be required when a flow triggered by some non-ems mechanism/protocol needs to 
+                        * fetch messages off EMS . Most likely, NoOfSessions=1 and Timeout=<int>  in this sceanrio.
+                        * Main thread does not wait for the threads to finish , however multiple receivers/consumers so created 
+                        * will be destroyed all at once and not one-by-one.
+                        * You dont want it to put in loop , unlike in the other constructor , because there is not much use 
+                        * repeating something that did not fetch anything in first place and had to time out.Rather
+                        * this mechanism is better suited  where possibilty of message arrival is rather low or producer is sluggish.
+                        */
                    }
 
 
@@ -100,7 +102,7 @@ namespace Messaging.EMS.SyncMessageConsumers
 
        }
 
-     public virtual   void ReceiveAndProcessMessage(Message msg)
+       public virtual   void ReceiveAndProcessMessage(Message msg)
         { }
     }
 }

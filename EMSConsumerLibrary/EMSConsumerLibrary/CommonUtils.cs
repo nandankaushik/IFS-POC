@@ -90,7 +90,7 @@ namespace Messaging.EMS
             {
 
                 QueueInfo queue = new QueueInfo(QueueName);
-                string url = System.Configuration.ConfigurationManager.ConnectionStrings["JNDIContextURL"].ConnectionString;
+                string url = System.Configuration.ConfigurationManager.ConnectionStrings["JmsProviderUrl"].ConnectionString;
                 string user = System.Configuration.ConfigurationManager.ConnectionStrings["username"].ConnectionString; ;
                 string password = System.Configuration.ConfigurationManager.ConnectionStrings["password"].ConnectionString;
                 Admin admin = new Admin(url, user, password);
