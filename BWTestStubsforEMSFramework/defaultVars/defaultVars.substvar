@@ -2,12 +2,12 @@
 <repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
 	<globalVariables>
 		<globalVariable>
-			<name>AppServer</name>
-			<value></value>
+			<name>BW_GLOBAL_TRUSTED_CA_STORE</name>
+			<value>file:///D:/Entwicklung/TibcoEms/ems/6.3/samples/certs/</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<modTime>1464881914028</modTime>
+			<modTime>1321034745496</modTime>
 		</globalVariable>
 		<globalVariable>
 			<name>Client</name>
@@ -35,11 +35,11 @@
 		</globalVariable>
 		<globalVariable>
 			<name>CountofMessages</name>
-			<value>5</value>
+			<value>15</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<modTime>1475046973467</modTime>
+			<modTime>1490604964585</modTime>
 		</globalVariable>
 		<globalVariable>
 			<name>Deployment</name>
@@ -99,7 +99,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>JMSPassword</name>
-			<value>#!MwyqheShx7oie/GZ8iJbjA==</value>
+			<value>#!ONLBJAxCbzWfrcQpa7HfLw==</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Password</type>
@@ -114,20 +114,28 @@
 			<modTime>1474263867358</modTime>
 		</globalVariable>
 		<globalVariable>
-			<name>JNDIContextURL</name>
-			<value>tibjmsnaming://localhost:7222</value>
+			<name>JNDIContextSSLURL</name>
+			<value>tibjmsnaming://localhost:7243,tibjmsnaming://localhost:7244</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<modTime>1474263842687</modTime>
+			<modTime>1490808285357</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>JNDIContextURL</name>
+			<value>tibjmsnaming://localhost:7222,tibjmsnaming://localhost:7223</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1490808361165</modTime>
 		</globalVariable>
 		<globalVariable>
 			<name>JmsSslProviderUrl</name>
-			<value>ssl://localhost:7243</value>
+			<value>ssl://localhost:7243,ssl://localhost:7244</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<modTime>1464025163494</modTime>
+			<modTime>1490275432360</modTime>
 		</globalVariable>
 		<globalVariable>
 			<name>NoOfSessions</name>
@@ -144,6 +152,22 @@
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<modTime>1474980523376</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>PrivateKeyPassword</name>
+			<value>#!jCdGrqeB/fCYWrLPuT6NDljmE+rpzt3Yf/8YOjOifbI=</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<modTime>1489597646217</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>QueueConnectionFactory</name>
+			<value>SSLQueueConnectionFactory</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1490809260224</modTime>
 		</globalVariable>
 		<globalVariable>
 			<name>QueueForBWConsumer</name>
@@ -242,12 +266,28 @@
 			<modTime>1464025163447</modTime>
 		</globalVariable>
 		<globalVariable>
+			<name>TargetHostname</name>
+			<value>www.example.com</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1490255405452</modTime>
+		</globalVariable>
+		<globalVariable>
 			<name>TestQueue</name>
 			<value>Consumers.For.DULDXXXX.q1</value>
 			<deploymentSettable>true</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<modTime>1473692089200</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>TopicConnectionFactory</name>
+			<value>SSLTopicConnectionFactory</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1490809304700</modTime>
 		</globalVariable>
 	</globalVariables>
 </repository>

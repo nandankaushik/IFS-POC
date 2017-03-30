@@ -3,6 +3,8 @@
     <config>
         <Host>localhost</Host>
         <serverType>Tomcat</serverType>
+        <Port>8084</Port>
+        <useSsl>true</useSsl>
         <HttpConnectionProperties>
             <row>
                 <PropertyName>maxPostSize (bytes)</PropertyName>
@@ -40,6 +42,10 @@
                 <PropertyDefaultValue>60000</PropertyDefaultValue>
             </row>
         </HttpConnectionProperties>
-        <Port>8080</Port>
+        <ns1:ssl xmlns:ns1="http://www.tibco.com/xmlns/aemeta/services/2002">
+            <ns1:strongCipherSuitesOnly>false</ns1:strongCipherSuitesOnly>
+            <ns1:requiresClientAuthentication>false</ns1:requiresClientAuthentication>
+            <ns1:identity isRef="true">/Miscellaneous/identity/Identity.id</ns1:identity>
+        </ns1:ssl>
     </config>
 </ns0:httpSharedResource>

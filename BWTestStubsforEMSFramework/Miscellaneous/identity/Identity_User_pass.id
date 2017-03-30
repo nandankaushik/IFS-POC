@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <identity>
+        <objectType>usernamePassword</objectType>
+        <name>Identity_User_pass</name>
+        <designer>
+            <lockedProperties/>
+            <fixedChildren/>
+            <resourceDescriptions/>
+        </designer>
+        <certUrl>file://D:/Entwicklung/TibcoEms/ems/6.3/samples/certs/server.cert.pem</certUrl>
+        <fileType>PKCS12</fileType>
+        <url>file://D:/Entwicklung/TibcoEms/ems/6.3/samples/certs/client_identity.p12</url>
+        <passPhrase>%%PrivateKeyPassword%%</passPhrase>
+        <privateKeyUrl>file://D:/Entwicklung/TibcoEms/ems/6.3/samples/certs/server.key.pem</privateKeyUrl>
+        <username>user1</username>
+        <password>#!cqEK55A6hPJzLUJlG/UXbBjbiyzBNHwe</password>
+    </identity>
+</Repository:repository>

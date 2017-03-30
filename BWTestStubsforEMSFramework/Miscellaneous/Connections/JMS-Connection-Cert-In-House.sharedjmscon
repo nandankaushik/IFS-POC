@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>JMS-Connection-Cert-In-House</name>
+    <resourceType>ae.shared.JMSConnectionKey</resourceType>
+    <config>
+        <NamingEnvironment>
+            <UseJNDI>true</UseJNDI>
+            <ProviderURL>%%JmsSslProviderUrl%%</ProviderURL>
+            <NamingURL>%%JNDIContextSSLURL%%</NamingURL>
+            <NamingInitialContextFactory>com.tibco.tibjms.naming.TibjmsInitialContextFactory</NamingInitialContextFactory>
+            <TopicFactoryName>SSLTopicConnectionFactory</TopicFactoryName>
+            <QueueFactoryName>SSLQueueConnectionFactory</QueueFactoryName>
+            <NamingPrincipal>%%JMSUserName%%</NamingPrincipal>
+            <NamingCredential>%%JMSPassword%%</NamingCredential>
+        </NamingEnvironment>
+        <ConnectionAttributes>
+            <username>%%JMSUserName%%</username>
+            <password>%%JMSPassword%%</password>
+            <clientID>%%Client-ID%%</clientID>
+            <autoGenClientID>false</autoGenClientID>
+        </ConnectionAttributes>
+        <UseXACF>false</UseXACF>
+        <useSsl>true</useSsl>
+        <AdmFactorySslPassword/>
+        <ns0:ssl xmlns:ns0="http://www.tibco.com/xmlns/aemeta/services/2002">
+            <ns0:trace>true</ns0:trace>
+            <ns0:debugTrace>true</ns0:debugTrace>
+            <ns0:verifyHostName>true</ns0:verifyHostName>
+            <ns0:strongCipherSuitesOnly>true</ns0:strongCipherSuitesOnly>
+            <ns0:expectedHostName>%%TargetHostname%%</ns0:expectedHostName>
+            <ns0:cert isRef="true">/Miscellaneous/Certs_bak/.folder</ns0:cert>
+        </ns0:ssl>
+    </config>
+</BWSharedResource>

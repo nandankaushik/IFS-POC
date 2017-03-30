@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>JNDI Configuration</name>
+    <resourceType>ae.shared.JNDISharedConfiguration</resourceType>
+    <config>
+        <ValidateJndiSecurityContext>true</ValidateJndiSecurityContext>
+        <ContextFactory>com.tibco.tibjms.naming.TibjmsInitialContextFactory</ContextFactory>
+        <ProviderUrl>%%JNDIContextSSLURL%%</ProviderUrl>
+        <SecurityPrincipal>%%JMSUserName%%</SecurityPrincipal>
+        <SecurityCredentials>%%JMSPassword%%</SecurityCredentials>
+    </config>
+</BWSharedResource>

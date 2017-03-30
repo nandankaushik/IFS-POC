@@ -63,21 +63,33 @@
                 <soapAction>/ASyncConsumers/ServiceProvider-Soap-ASync</soapAction>
                 <sharedChannels>
                     <jmsChannel>
-                        <NamingURL>tibjmsnaming://localhost:7222</NamingURL>
+                        <NamingURL>%%JmsSslProviderUrl%%</NamingURL>
                         <NamingInitialContextFactory>com.tibco.tibjms.naming.TibjmsInitialContextFactory</NamingInitialContextFactory>
-                        <NamingPrincipal>admin</NamingPrincipal>
-                        <NamingCredential/>
-                        <ConnectionFactory>QueueConnectionFactory</ConnectionFactory>
-                        <JMSTo>Consumers.For.BW.q1</JMSTo>
+                        <NamingPrincipal>%%JMSUserName%%</NamingPrincipal>
+                        <NamingCredential>%%JMSPassword%%</NamingCredential>
+                        <ConnectionFactory>SSLQueueConnectionFactory</ConnectionFactory>
+                        <JMSTo>%%QueueForBWProducer%%</JMSTo>
                         <JMSMessageType>Text</JMSMessageType>
                         <JMSDeliveryMode>PERSISTENT</JMSDeliveryMode>
                         <JMSPriority>4</JMSPriority>
                         <JMSTimeToLive>0</JMSTimeToLive>
-                        <JMSUserName>admin</JMSUserName>
-                        <JMSPassword/>
+                        <JMSUserName>%%JMSUserName%%</JMSUserName>
+                        <JMSPassword>%%JMSPassword%%</JMSPassword>
                         <JMSNamingValidateSecurityContext>true</JMSNamingValidateSecurityContext>
+                        <ConnectionFactorySSLPassword>#!IKu8WV7wB2kE74q88Qb7Ih+uIsyeXvlx</ConnectionFactorySSLPassword>
+                        <shareJms>true</shareJms>
                     </jmsChannel>
                 </sharedChannels>
+                <useSsl>true</useSsl>
+                <ConnectionReference>/Miscellaneous/Connections/JMS-Connection-SSL-Using-BW_GLOBAL_TRUSTED_CA_STORE.sharedjmscon</ConnectionReference>
+                <ns6:ssl xmlns:ns6="http://www.tibco.com/xmlns/aemeta/services/2002">
+                    <ns6:trace>true</ns6:trace>
+                    <ns6:debugTrace>true</ns6:debugTrace>
+                    <ns6:verifyHostName>true</ns6:verifyHostName>
+                    <ns6:strongCipherSuitesOnly>true</ns6:strongCipherSuitesOnly>
+                    <ns6:cert isRef="true">%%BW_GLOBAL_TRUSTED_CA_STORE%%</ns6:cert>
+                    <ns6:expectedHostName>www.example.com</ns6:expectedHostName>
+                </ns6:ssl>
             </config>
             <pd:inputBindings>
                 <inputMessage>

@@ -24,7 +24,7 @@
                 <JMSExpiration>0</JMSExpiration>
                 <JMSPriority>4</JMSPriority>
             </ConfigurableHeaders>
-            <ConnectionReference>/Miscellaneous/Connections/JMS Connection.sharedjmscon</ConnectionReference>
+            <ConnectionReference>/Miscellaneous/Connections/JMS-Connection-Cert-In-House.sharedjmscon</ConnectionReference>
         </config>
         <pd:inputBindings/>
     </pd:starter>

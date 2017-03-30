@@ -22,7 +22,7 @@
             <embedWsdlComponents>true</embedWsdlComponents>
             <embedSchemaComponents>true</embedSchemaComponents>
             <soapAction>/ASyncConsumers/ServiceProvider-Soap-ASync</soapAction>
-            <sharedChannel>/Miscellaneous/Connections/JMS Connection.sharedjmscon</sharedChannel>
+            <sharedChannel>/Miscellaneous/Connections/JMS Connection-Using-Shared-JNDI.sharedjmscon</sharedChannel>
             <sharedChannels>
                 <jmsChannel>
                     <JMSDestinationType>queue</JMSDestinationType>
